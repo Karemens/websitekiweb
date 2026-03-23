@@ -1,0 +1,1 @@
+Dieses Projekt ist noch nicht fertig, selbst das design wird noch überarbeitet da die idee sehr viel mit interaktionen zu tun hat.
