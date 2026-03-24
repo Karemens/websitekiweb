@@ -38,7 +38,7 @@ img {
 }
 
 .logo-box {
-  background: rgba(255, 255, 255, 0.96);
+  
   padding: 12px 16px;
 }
 
@@ -104,14 +104,13 @@ img {
 .main-content {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 56px 24px 80px;
+  padding: 30px 1px 1px;
 }
 
 .intro-strip {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 40px;
-  margin-bottom: 56px;
+  grid-template-columns: 3fr;
+  margin-bottom: 5px;
   align-items: start;
 }
 
