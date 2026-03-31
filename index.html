@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FHNW Muttenz</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="website.css" />
 </head>
 <body>
@@ -33,17 +34,14 @@
         <h1>FHNW<br>MUTTENZ</h1>
         <p>Eine Zukunft gestalten</p>
       </div>
-
-      
     </section>
 
     <!-- 2 -->
     <section class="panel text-image light">
       <div class="shape"></div>
       <div class="content glass light-glass">
-        <span class="label dark-label">Architektur</span>
+        <span class="label">Architektur</span>
         <h2>Räume mit Haltung und klarer Wirkung</h2>
-        
       </div>
       <div class="side-image">
         <img src="kiweb1.jpg" alt="Architektonische Visualisierung 1" />
@@ -54,21 +52,31 @@
     <section class="panel image-panel">
       <div class="bg"><img src="room.jpg" alt="Innenraum" /></div>
       <div class="card glass dark left">
-        <span class="label dark-label">Räume</span>
+        <span class="label">Räume</span>
         <h3>Monumentale Ruhe im Raum</h3>
-        
       </div>
-      
     </section>
 
     <!-- 4 -->
-    <section class="panel split dark-theme">
+    <section class="panel split">
       <div class="copy">
         <span class="label">Atmosphäre</span>
         <h3>Transparenz und offene Übergänge</h3>
-        
       </div>
       <div class="media"><img src="kiweb2.jpg" alt="Architektonische Visualisierung 2" /></div>
+    </section>
+
+    <!-- Seitensprung zu Slide 4 -->
+    <section class="panel side-panel">
+      <div class="bg">
+        <img src="kiweb5.jpg" alt="Zusätzliche Ansicht" />
+      </div>
+
+      <div class="card left">
+        <span class="label">Vertiefung</span>
+        <h3>Weitere Perspektive</h3>
+        <p>Eine zusätzliche Bildbühne als Seitensprung zu Slide 4.</p>
+      </div>
     </section>
 
     <!-- 5 -->
@@ -77,18 +85,15 @@
       <div class="card glass right">
         <span class="label">Begegnung</span>
         <h3>Offene Flächen mit Charakter</h3>
-        
       </div>
-      
     </section>
 
     <!-- 6 -->
     <section class="panel text-image light reverse">
       <div class="shape"></div>
       <div class="content glass light-glass">
-        <span class="label dark-label">Nutzung</span>
+        <span class="label">Nutzung</span>
         <h2>Flexible Strukturen für neue Arbeitsweisen</h2>
-        
       </div>
       <div class="side-image">
         <img src="kiweb3.jpg" alt="Architektonische Visualisierung 3" />
@@ -101,7 +106,6 @@
       <div class="card glass dark left top">
         <span class="label">Lernen</span>
         <h3>Flächen, die Bewegung und Konzentration verbinden</h3>
-        
       </div>
       <div class="corner"></div>
     </section>
@@ -109,84 +113,197 @@
     <!-- 8 -->
     <section class="panel split">
       <div class="copy light-copy">
-        <span class="label dark-label">Vision</span>
+        <span class="label">Vision</span>
         <h3>Architektur darf still sein und trotzdem stark auftreten</h3>
-        
       </div>
       <div class="media"><img src="kiweb4.jpg" alt="Architektonische Visualisierung 4" /></div>
     </section>
 
-  
-
   </div>
 
   <div class="dots" id="dots">
-    <button class="dot active" data-index="0"></button>
-    <button class="dot" data-index="1"></button>
-    <button class="dot" data-index="2"></button>
-    <button class="dot" data-index="3"></button>
-    <button class="dot" data-index="4"></button>
-    <button class="dot" data-index="5"></button>
-    <button class="dot" data-index="6"></button>
-    <button class="dot" data-index="7"></button>
-  
+    <button class="dot active" data-index="0" type="button" aria-label="Slide 1"></button>
+    <button class="dot" data-index="1" type="button" aria-label="Slide 2"></button>
+    <button class="dot" data-index="2" type="button" aria-label="Slide 3"></button>
+
+    <div class="dot-pair">
+      <button class="dot" data-index="3" type="button" aria-label="Slide 4"></button>
+      <button class="dot side-dot" type="button" aria-label="Zusatzansicht zu Slide 4"></button>
+    </div>
+
+    <button class="dot" data-index="4" type="button" aria-label="Slide 5"></button>
+    <button class="dot" data-index="5" type="button" aria-label="Slide 6"></button>
+    <button class="dot" data-index="6" type="button" aria-label="Slide 7"></button>
+    <button class="dot" data-index="7" type="button" aria-label="Slide 8"></button>
   </div>
 
   <script>
     const slider = document.getElementById("slider");
-    const panels = [...document.querySelectorAll(".panel")];
-    const dots = [...document.querySelectorAll(".dot")];
+    const panels = [...document.querySelectorAll(".slider > .panel:not(.side-panel)")];
+    const dots = [...document.querySelectorAll(".dots .dot[data-index]")];
+    const sideDot = document.querySelector(".side-dot");
 
+    const branchIndex = 3; // Slide 4
     let current = 0;
     let busy = false;
+    let sideActive = false;
+
+    let startX = 0;
     let startY = 0;
 
-    function goTo(index) {
-      if (index < 0 || index >= panels.length || busy) return;
-      busy = true;
-      current = index;
+    function renderSlider() {
+      const x = sideActive ? -100 : 0;
+      const y = current * -100;
 
-      slider.style.transform = `translateY(-${index * 100}vh)`;
+      slider.style.transform = `translate3d(${x}vw, ${y}vh, 0)`;
 
-      panels.forEach((p, i) => p.classList.toggle("active", i === index));
-      dots.forEach((d, i) => d.classList.toggle("active", i === index));
+      panels.forEach((p, i) => {
+        p.classList.toggle("active", i === current && !sideActive);
+        p.classList.toggle("prev", i < current);
+      });
 
-      setTimeout(() => busy = false, 700);
+      dots.forEach((d, i) => {
+        d.classList.toggle("active", i === current && !sideActive);
+      });
+
+      if (sideDot) sideDot.classList.toggle("active", sideActive);
     }
 
-    function next() { goTo(current + 1); }
-    function prev() { goTo(current - 1); }
+    function unlockAfter(ms = 850) {
+      setTimeout(() => {
+        busy = false;
+      }, ms);
+    }
+
+    function goTo(index) {
+      if (busy) return;
+      if (index < 0 || index >= panels.length) return;
+
+      busy = true;
+      current = index;
+      sideActive = false;
+      renderSlider();
+      unlockAfter();
+    }
+
+    function next() {
+      goTo(current + 1);
+    }
+
+    function prev() {
+      goTo(current - 1);
+    }
+
+    function openSide() {
+      if (busy || current !== branchIndex) return;
+      busy = true;
+      sideActive = true;
+      renderSlider();
+      unlockAfter();
+    }
+
+    function closeSide() {
+      if (busy || !sideActive) return;
+      busy = true;
+      sideActive = false;
+      renderSlider();
+      unlockAfter();
+    }
 
     window.addEventListener("wheel", (e) => {
-      if (busy || Math.abs(e.deltaY) < 20) return;
-      e.deltaY > 0 ? next() : prev();
+      if (busy) return;
+      if (Math.abs(e.deltaY) < 20) return;
+
+      if (sideActive) {
+        if (e.deltaY < 0) closeSide();
+        else next();
+        return;
+      }
+
+      if (e.deltaY > 0) next();
+      else prev();
     }, { passive: true });
 
     window.addEventListener("keydown", (e) => {
-      if (["ArrowDown", "PageDown", " "].includes(e.key)) {
+      if (e.key === "ArrowDown" || e.key === "PageDown" || e.key === " ") {
         e.preventDefault();
         next();
       }
-      if (["ArrowUp", "PageUp"].includes(e.key)) {
+
+      if (e.key === "ArrowUp" || e.key === "PageUp") {
         e.preventDefault();
-        prev();
+        if (sideActive) closeSide();
+        else prev();
+      }
+
+      if (e.key === "ArrowLeft" && current === branchIndex && !sideActive) {
+        e.preventDefault();
+        openSide();
+      }
+
+      if (e.key === "ArrowRight" && sideActive) {
+        e.preventDefault();
+        closeSide();
       }
     });
 
     window.addEventListener("touchstart", (e) => {
+      startX = e.changedTouches[0].clientX;
       startY = e.changedTouches[0].clientY;
     }, { passive: true });
 
     window.addEventListener("touchend", (e) => {
+      if (busy) return;
+
+      const endX = e.changedTouches[0].clientX;
       const endY = e.changedTouches[0].clientY;
-      const diff = startY - endY;
-      if (busy || Math.abs(diff) < 50) return;
-      diff > 0 ? next() : prev();
+
+      const diffX = startX - endX;
+      const diffY = startY - endY;
+
+      if (Math.abs(diffX) > Math.abs(diffY)) {
+        if (Math.abs(diffX) < 50) return;
+
+        if (current === branchIndex && !sideActive && diffX > 0) {
+          openSide();
+        } else if (sideActive && diffX < 0) {
+          closeSide();
+        }
+        return;
+      }
+
+      if (Math.abs(diffY) < 50) return;
+
+      if (sideActive) {
+        if (diffY < 0) closeSide();
+        else next();
+        return;
+      }
+
+      if (diffY > 0) next();
+      else prev();
     }, { passive: true });
 
     dots.forEach(dot => {
-      dot.addEventListener("click", () => goTo(+dot.dataset.index));
+      dot.addEventListener("click", () => {
+        goTo(Number(dot.dataset.index));
+      });
     });
+
+    if (sideDot) {
+      sideDot.addEventListener("click", () => {
+        if (current !== branchIndex) {
+          goTo(branchIndex);
+          setTimeout(() => openSide(), 80);
+        } else if (!sideActive) {
+          openSide();
+        } else {
+          closeSide();
+        }
+      });
+    }
+
+    renderSlider();
   </script>
 
 </body>
