@@ -3,17 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FHNW Muttenz</title>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <title>FHNW Campus Muttenz – pool Architekten</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="website.css" />
 </head>
 <body>
 
+  <div class="site-rail">
+    <span>POOL / PROJEKT 0275 / FHNW CAMPUS MUTTENZ</span>
+  </div>
+
+  <div class="page-frame"></div>
+
   <div class="slider" id="slider">
 
-    <!-- 1 -->
-    <section class="panel image-panel active">
-      <div class="bg"><img src="hero-building.jpg" alt="FHNW Muttenz Aussenansicht" /></div>
+    <!-- PAGE 1 -->
+    <section class="panel main-panel image-panel hero-panel active">
+      <div class="bg"><img src="hero-building.jpg" alt="FHNW Campus Muttenz Aussenansicht" /></div>
+      <div class="grid-overlay dark-grid"></div>
+
+      <div class="pool-badge hero-badge logo-boxed">
+        <img src="poollogo.jpg" alt="POOL Logo" />
+      </div>
 
       <div class="topbar">
         <div class="logo-box">
@@ -21,167 +32,434 @@
         </div>
 
         <nav class="nav">
-          <a href="#">Büro</a>
-          <a href="#">Projekte</a>
-          <a href="#">Über uns</a>
-          <a href="#">Veranstaltungen</a>
-          <a href="#">Bewerben</a>
+          <a href="#">Projekt</a>
+          <a href="#">Architektur</a>
+          <a href="#">Daten</a>
+          <a href="#">Team</a>
+          <a href="#">Kontakt</a>
         </nav>
       </div>
 
-      <div class="hero-content glass">
-        <div class="eyebrow">Campus / Architektur / Zukunft</div>
-        <h1>FHNW<br>MUTTENZ</h1>
-        <p>Eine Zukunft gestalten</p>
+      <div class="hero-content">
+        <div class="eyebrow">POOL Architekten / Projekt 0275</div>
+        <h1>FHNW<br>CAMPUS<br>MUTTENZ</h1>
+        <p>Neubau für Lehre, Forschung, Labor, Verwaltung, Gastro und Sport</p>
+      </div>
+
+      <div class="hero-note">
+        <span>12 Obergeschosse, 3 Untergeschosse, 5 Fakultäten, 4000 Studierende, 800 Mitarbeitende</span>
       </div>
     </section>
 
-    <!-- 2 -->
-    <section class="panel text-image light">
-      <div class="shape"></div>
-      <div class="content glass light-glass">
-        <span class="label">Architektur</span>
-        <h2>Räume mit Haltung und klarer Wirkung</h2>
+    <!-- PAGE 2 -->
+    <section class="panel main-panel split light-panel checkpoint-panel">
+      <div class="copy straight-copy">
+        <span class="label">Kurzbeschrieb</span>
+        <h3>Ein kompakter Hochschulbau mit starker Wechselwirkung zwischen Architektur und Freiraum</h3>
+        <p>Der Neubau bündelt Lehre, Forschung, Labor, Verwaltung, Gastronomie und Sport in einer flexiblen Struktur mit wirtschaftlichem Betrieb.</p>
+
+        <div class="facts-inline">
+          <div><strong>Adresse</strong><span>Hofackerstrasse 30, 4132 Muttenz</span></div>
+          <div><strong>Wettbewerb</strong><span>2010–2011, 1. Preis</span></div>
+          <div><strong>Planung / Ausführung</strong><span>2011–2018 / 2014–2018</span></div>
+        </div>
       </div>
-      <div class="side-image">
-        <img src="kiweb1.jpg" alt="Architektonische Visualisierung 1" />
+
+      <div class="media framed-media">
+        <img src="kiweb1.jpg" alt="Architektonische Visualisierung" />
+      </div>
+
+      <div class="grid-overlay light-grid"></div>
+
+      <div class="pool-badge pool-badge-light">
+        <img src="poollogo.jpg" alt="POOL Logo" />
+      </div>
+
+      <button class="branch-cue left" data-open-branch="1:left" aria-label="Grundrisse öffnen">
+        <strong>←</strong>
+        <span>Grundrisse</span>
+      </button>
+
+      <button class="branch-cue right" data-open-branch="1:right" aria-label="Projektdaten öffnen">
+        <span>Projektdaten</span>
+        <strong>→</strong>
+      </button>
+    </section>
+
+    <!-- BRANCH LEFT from PAGE 2 -->
+    <section class="panel branch-panel branch-left light-branch-panel" data-parent="1" data-dir="left">
+      <div class="branch-bg light-branch-bg"></div>
+      <div class="branch-grid light-branch-grid"></div>
+
+      <div class="branch-topline dark-topline">GRUNDRISSE / PLANMATERIAL / ÜBERSICHT</div>
+
+      <div class="plan-page-layout plans-only-layout">
+        <div class="plan-page-grid plans-only-grid">
+          <div class="plan-sheet"><img src="plan1.png" alt="Grundriss 1" /></div>
+          <div class="plan-sheet"><img src="plan2.png" alt="Grundriss 2" /></div>
+          <div class="plan-sheet"><img src="plan3.png" alt="Grundriss 3" /></div>
+          <div class="plan-sheet"><img src="plan4.png" alt="Grundriss 4" /></div>
+          <div class="plan-sheet"><img src="plan5.png" alt="Grundriss 5" /></div>
+          <div class="plan-sheet"><img src="plan6.png" alt="Grundriss 6" /></div>
+          <div class="plan-sheet"><img src="plan7.png" alt="Grundriss 7" /></div>
+          <div class="plan-sheet"><img src="plan8.png" alt="Grundriss 8" /></div>
+        </div>
       </div>
     </section>
 
-    <!-- 3 -->
-    <section class="panel image-panel">
-      <div class="bg"><img src="room.jpg" alt="Innenraum" /></div>
-      <div class="card glass dark left">
-        <span class="label">Räume</span>
-        <h3>Monumentale Ruhe im Raum</h3>
+    <!-- BRANCH RIGHT from PAGE 2 -->
+    <section class="panel branch-panel branch-right" data-parent="1" data-dir="right">
+      <div class="branch-bg dark-branch-bg"></div>
+      <div class="branch-grid"></div>
+
+      <div class="branch-topline">PROJEKTDATEN / 0275</div>
+
+      <div class="branch-data-layout">
+        <div class="branch-card">
+          <span class="label">Kennzahlen</span>
+          <h3>Volumen, Fläche, Kosten</h3>
+          <p>Gebäudevolumen 355'000 m³, Geschossfläche 68'000 m², Hauptnutzfläche 35'000 m². Baukosten BKP 1–9: 300 Mio. CHF.</p>
+        </div>
+
+        <div class="metric-grid">
+          <div class="metric-box"><strong>64.5 × 72 m</strong><span>Grundfläche</span></div>
+          <div class="metric-box"><strong>64.5 m</strong><span>Höhe ab Eingang</span></div>
+          <div class="metric-box"><strong>470 CHF/m³</strong><span>BKP 2 / m³</span></div>
+          <div class="metric-box"><strong>210 Mio. CHF</strong><span>Gebäudekosten BKP 2</span></div>
+          <div class="metric-box"><strong>5 Fakultäten</strong><span>Nutzung</span></div>
+          <div class="metric-box"><strong>SIA 31–53</strong><span>Phasen</span></div>
+        </div>
       </div>
     </section>
 
-    <!-- 4 -->
-    <section class="panel split">
-      <div class="copy">
-        <span class="label">Atmosphäre</span>
-        <h3>Transparenz und offene Übergänge</h3>
-      </div>
-      <div class="media"><img src="kiweb2.jpg" alt="Architektonische Visualisierung 2" /></div>
-    </section>
+    <!-- PAGE 3 -->
+    <section class="panel main-panel image-panel aligned-image-panel">
+      <div class="bg"><img src="room.jpg" alt="Innenraum FHNW Muttenz" /></div>
+      <div class="grid-overlay dark-grid"></div>
 
-    <!-- Seitensprung zu Slide 4 -->
-    <section class="panel side-panel">
-      <div class="bg">
-        <img src="kiweb5.jpg" alt="Zusätzliche Ansicht" />
-      </div>
-
-      <div class="card left">
-        <span class="label">Vertiefung</span>
-        <h3>Weitere Perspektive</h3>
-        <p>Eine zusätzliche Bildbühne als Seitensprung zu Slide 4.</p>
+      <div class="card dark-card left">
+        <span class="label">Raum</span>
+        <h3>Monumentale Ruhe und präzise Orientierung</h3>
+        <p>Die innere Ordnung verbindet Großzügigkeit, klare Erschliessung und eine robuste Atmosphäre für den täglichen Hochschulbetrieb.</p>
       </div>
     </section>
 
-    <!-- 5 -->
-    <section class="panel image-panel">
-      <div class="bg"><img src="food.jpg" alt="Offener Aufenthaltsbereich" /></div>
-      <div class="card glass right">
+    <!-- PAGE 4 -->
+    <section class="panel main-panel split light-panel checkpoint-panel">
+      <div class="copy straight-copy">
+        <span class="label">Struktur</span>
+        <h3>Flexible Organisation für Lehre, Forschung und Verwaltung</h3>
+        <p>Die Stärke des Hauses liegt in seiner klaren, anpassungsfähigen Struktur und in der präzisen Verzahnung von Nutzungen, Wegen und offenen Bereichen.</p>
+
+        <div class="facts-inline compact">
+          <div><strong>Planungsmodell</strong><span>Generalplaner-Modell</span></div>
+          <div><strong>Funktion pool</strong><span>Architekt / Gesamtleitung</span></div>
+        </div>
+      </div>
+
+      <div class="media framed-media">
+        <img src="kiweb2.jpg" alt="Architektonische Visualisierung 2" />
+      </div>
+
+      <div class="grid-overlay light-grid"></div>
+
+      <div class="pool-badge pool-badge-light">
+        <img src="poollogo.jpg" alt="POOL Logo" />
+      </div>
+
+      <button class="branch-cue left" data-open-branch="3:left" aria-label="Schnitt öffnen">
+        <strong>←</strong>
+        <span>Schnitt</span>
+      </button>
+
+      <button class="branch-cue right" data-open-branch="3:right" aria-label="Perspektive öffnen">
+        <span>Perspektive</span>
+        <strong>→</strong>
+      </button>
+    </section>
+
+    <!-- BRANCH LEFT from PAGE 4 -->
+    <section class="panel branch-panel branch-left light-branch-panel" data-parent="3" data-dir="left">
+      <div class="branch-bg light-branch-bg"></div>
+      <div class="branch-grid light-branch-grid"></div>
+
+      <div class="branch-topline dark-topline">PLANMATERIAL / SCHNITT / ORDNUNG</div>
+
+      <div class="drawing-layout">
+        <div class="drawing-info">
+          <span class="label">Schnitt / Plan</span>
+          <h3>Mit Schnitten kannst du die räumliche Logik stark machen</h3>
+          <p>Ja — damit kann man sehr gut arbeiten. Schnitte, Fassaden oder Grundrisse eignen sich perfekt für diese Seitenräume, weil sie das Projekt nicht nur atmosphärisch, sondern auch konstruktiv und organisatorisch zeigen.</p>
+        </div>
+
+        <div class="drawing-frame">
+          <img src="0275_2OG_Hoersaal_gross.png" alt="Schnitt oder Plan des Gebäudes" />
+        </div>
+      </div>
+    </section>
+
+    <!-- BRANCH RIGHT from PAGE 4 -->
+    <section class="panel branch-panel branch-right" data-parent="3" data-dir="right">
+      <div class="branch-bg dark-branch-bg"></div>
+      <div class="branch-grid"></div>
+
+      <div class="branch-topline">PERSPEKTIVE / OFFENHEIT / STAFFELUNG</div>
+
+      <div class="perspective-layout">
+        <div class="perspective-media">
+          <img src="kiweb5.jpg" alt="Weitere Perspektive" />
+        </div>
+
+        <div class="branch-card">
+          <span class="label">Vertiefung</span>
+          <h3>Räumliche Tiefe statt bloßer Oberfläche</h3>
+          <p>Diese Zusatzebene funktioniert gut mit Bildern, die Atrium, Staffelung, mehrgeschossige Bezüge oder transparente Raumfolgen zeigen.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 5 -->
+    <section class="panel main-panel image-panel aligned-image-panel">
+      <div class="bg"><img src="food.jpg" alt="Aufenthaltsbereich FHNW Muttenz" /></div>
+      <div class="grid-overlay dark-grid"></div>
+
+      <div class="card light-card right">
         <span class="label">Begegnung</span>
-        <h3>Offene Flächen mit Charakter</h3>
+        <h3>Offene Bereiche für Aufenthalt, Austausch und Alltag</h3>
+        <p>Der Campus organisiert gemeinschaftliche Flächen mit Charakter, ohne die Klarheit der Gesamtfigur aufzugeben.</p>
       </div>
     </section>
 
-    <!-- 6 -->
-    <section class="panel text-image light reverse">
-      <div class="shape"></div>
-      <div class="content glass light-glass">
+    <!-- PAGE 6 -->
+    <section class="panel main-panel split light-panel checkpoint-panel reverse">
+      <div class="copy straight-copy">
         <span class="label">Nutzung</span>
-        <h2>Flexible Strukturen für neue Arbeitsweisen</h2>
+        <h3>Eine Struktur, die Wandel zulässt</h3>
+        <p>Die räumliche Organisation erlaubt unterschiedliche Lehr-, Arbeits- und Forschungssituationen und bleibt dabei robust, übersichtlich und wirtschaftlich.</p>
+
+        <div class="facts-inline compact">
+          <div><strong>Studierende</strong><span>4000</span></div>
+          <div><strong>Mitarbeitende</strong><span>800</span></div>
+        </div>
       </div>
-      <div class="side-image">
-        <img src="kiweb3.jpg" alt="Architektonische Visualisierung 3" />
+
+      <div class="media framed-media">
+        <img src="kiweb3.jpg" alt="Nutzungssituation FHNW Muttenz" />
+      </div>
+
+      <div class="grid-overlay light-grid"></div>
+
+      <div class="pool-badge pool-badge-light">
+        <img src="poollogo.jpg" alt="POOL Logo" />
+      </div>
+
+      <button class="branch-cue right" data-open-branch="5:right" aria-label="Arbeitswelt öffnen">
+        <span>Arbeitswelt</span>
+        <strong>→</strong>
+      </button>
+    </section>
+
+    <!-- BRANCH RIGHT from PAGE 6 -->
+    <section class="panel branch-panel branch-right" data-parent="5" data-dir="right">
+      <div class="branch-bg dark-branch-bg"></div>
+      <div class="branch-grid"></div>
+
+      <div class="branch-topline">FLEXIBILITÄT / NUTZUNG / ARBEITSWELT</div>
+
+      <div class="branch-data-layout">
+        <div class="branch-card">
+          <span class="label">Arbeitswelt</span>
+          <h3>Fokus und Kollaboration in einem System</h3>
+          <p>Hier passen Bilder, die Möblierung, Arbeitszonen, Lernlandschaften oder unterschiedliche Grade von Offenheit zeigen.</p>
+        </div>
+
+        <div class="branch-media-card flex-use-card">
+          <img src="branch-flex-use-right.png" alt="Flexible Nutzungssituation" />
+        </div>
       </div>
     </section>
 
-    <!-- 7 -->
-    <section class="panel image-panel">
-      <div class="bg"><img src="study-area.jpg" alt="Lernbereich" /></div>
-      <div class="card glass dark left top">
+    <!-- PAGE 7 -->
+    <section class="panel main-panel image-panel aligned-image-panel">
+      <div class="bg"><img src="study-area.jpg" alt="Lernbereich FHNW Muttenz" /></div>
+      <div class="grid-overlay dark-grid"></div>
+
+      <div class="card dark-card left top study-card">
         <span class="label">Lernen</span>
-        <h3>Flächen, die Bewegung und Konzentration verbinden</h3>
+        <h3>Flächen, die Konzentration und Bewegung zusammenbringen</h3>
+        <p>Arbeitslandschaften mit ruhiger Präsenz, guter Lichtführung und klarer Lesbarkeit im Alltag der Hochschule.</p>
       </div>
+
       <div class="corner"></div>
+
+      <button class="branch-cue left" data-open-branch="6:left" aria-label="Lichtführung öffnen">
+        <strong>←</strong>
+        <span>Licht</span>
+      </button>
     </section>
 
-    <!-- 8 -->
-    <section class="panel split">
-      <div class="copy light-copy">
-        <span class="label">Vision</span>
-        <h3>Architektur darf still sein und trotzdem stark auftreten</h3>
+    <!-- BRANCH LEFT from PAGE 7 -->
+    <section class="panel branch-panel branch-left light-branch-panel" data-parent="6" data-dir="left">
+      <div class="branch-bg light-branch-bg"></div>
+      <div class="branch-grid light-branch-grid"></div>
+
+      <div class="branch-topline dark-topline">LICHT / ATMOSPHÄRE / RÄUMLICHE FÜHRUNG</div>
+
+      <div class="light-layout">
+        <div class="light-media-frame">
+          <img src="branch-light-left.png" alt="Lichtstimmung Innenraum" />
+        </div>
+
+        <div class="branch-card light-card-branch">
+          <span class="label">Lichtführung</span>
+          <h3>Licht als ordnendes architektonisches Mittel</h3>
+          <p>Diese Ebene eignet sich für Stimmungen mit Oberlicht, Seitenlicht, Schattenkanten oder stark lesbaren Raumabschlüssen.</p>
+        </div>
       </div>
-      <div class="media"><img src="kiweb4.jpg" alt="Architektonische Visualisierung 4" /></div>
     </section>
 
+    <!-- PAGE 8 -->
+    <section class="panel main-panel split light-panel final-panel">
+      <div class="copy straight-copy">
+        <span class="label">Projektteam</span>
+        <h3>pool Architekten als Architekt und Gesamtleitung</h3>
+        <p>Generalplanung: pool Architekten Zürich / Takt Baumanagement AG Zürich. Landschaft: Studio Vulkan. Tragwerk: Schnetzer Puskas. HLKS: Kalt + Halbeisen.</p>
+
+        <div class="facts-inline compact">
+          <div><strong>Bauherrschaft</strong><span>Hochbauamt Kanton Basel-Landschaft</span></div>
+          <div><strong>Visualisierungen</strong><span>maaars</span></div>
+        </div>
+      </div>
+
+      <div class="media framed-media">
+        <img src="kiweb4.jpg" alt="Architektonische Visualisierung 4" />
+      </div>
+
+      <div class="grid-overlay light-grid"></div>
+
+      <div class="pool-badge pool-badge-light">
+        <img src="poollogo.jpg" alt="POOL Logo" />
+      </div>
+    </section>
   </div>
 
   <div class="dots" id="dots">
-    <button class="dot active" data-index="0" type="button" aria-label="Slide 1"></button>
-    <button class="dot" data-index="1" type="button" aria-label="Slide 2"></button>
-    <button class="dot" data-index="2" type="button" aria-label="Slide 3"></button>
-
-    <div class="dot-pair">
-      <button class="dot" data-index="3" type="button" aria-label="Slide 4"></button>
-      <button class="dot side-dot" type="button" aria-label="Zusatzansicht zu Slide 4"></button>
+    <div class="dot-group active" data-index="0">
+      <button class="dot main-dot active" data-index="0" type="button" aria-label="Seite 1"></button>
     </div>
 
-    <button class="dot" data-index="4" type="button" aria-label="Slide 5"></button>
-    <button class="dot" data-index="5" type="button" aria-label="Slide 6"></button>
-    <button class="dot" data-index="6" type="button" aria-label="Slide 7"></button>
-    <button class="dot" data-index="7" type="button" aria-label="Slide 8"></button>
+    <div class="dot-group checkpoint-dot" data-index="1">
+      <button class="mini-dot left-mini" data-branch="1:left" type="button" aria-label="Grundrisse links"></button>
+      <button class="dot main-dot" data-index="1" type="button" aria-label="Seite 2"></button>
+      <button class="mini-dot right-mini" data-branch="1:right" type="button" aria-label="Projektdaten rechts"></button>
+    </div>
+
+    <div class="dot-group" data-index="2">
+      <button class="dot main-dot" data-index="2" type="button" aria-label="Seite 3"></button>
+    </div>
+
+    <div class="dot-group checkpoint-dot" data-index="3">
+      <button class="mini-dot left-mini" data-branch="3:left" type="button" aria-label="Schnitt links"></button>
+      <button class="dot main-dot" data-index="3" type="button" aria-label="Seite 4"></button>
+      <button class="mini-dot right-mini" data-branch="3:right" type="button" aria-label="Perspektive rechts"></button>
+    </div>
+
+    <div class="dot-group" data-index="4">
+      <button class="dot main-dot" data-index="4" type="button" aria-label="Seite 5"></button>
+    </div>
+
+    <div class="dot-group checkpoint-dot" data-index="5">
+      <button class="mini-dot right-mini" data-branch="5:right" type="button" aria-label="Arbeitswelt rechts"></button>
+      <button class="dot main-dot" data-index="5" type="button" aria-label="Seite 6"></button>
+    </div>
+
+    <div class="dot-group checkpoint-dot" data-index="6">
+      <button class="mini-dot left-mini" data-branch="6:left" type="button" aria-label="Licht links"></button>
+      <button class="dot main-dot" data-index="6" type="button" aria-label="Seite 7"></button>
+    </div>
+
+    <div class="dot-group" data-index="7">
+      <button class="dot main-dot" data-index="7" type="button" aria-label="Seite 8"></button>
+    </div>
   </div>
 
   <script>
     const slider = document.getElementById("slider");
-    const panels = [...document.querySelectorAll(".slider > .panel:not(.side-panel)")];
-    const dots = [...document.querySelectorAll(".dots .dot[data-index]")];
-    const sideDot = document.querySelector(".side-dot");
+    const mainPanels = [...document.querySelectorAll(".main-panel")];
+    const branchPanels = [...document.querySelectorAll(".branch-panel")];
+    const dots = [...document.querySelectorAll(".main-dot[data-index]")];
+    const dotGroups = [...document.querySelectorAll(".dot-group[data-index]")];
+    const miniDots = [...document.querySelectorAll(".mini-dot[data-branch]")];
+    const branchButtons = [...document.querySelectorAll("[data-open-branch]")];
 
-    const branchIndex = 3; // Slide 4
     let current = 0;
     let busy = false;
-    let sideActive = false;
-
+    let activeBranchKey = null;
     let startX = 0;
     let startY = 0;
 
-    function renderSlider() {
-      const x = sideActive ? -100 : 0;
-      const y = current * -100;
+    const branchMap = {};
 
-      slider.style.transform = `translate3d(${x}vw, ${y}vh, 0)`;
+    branchPanels.forEach(panel => {
+      const parent = Number(panel.dataset.parent);
+      const dir = panel.dataset.dir;
+      const key = `${parent}:${dir}`;
+      branchMap[key] = panel;
 
-      panels.forEach((p, i) => {
-        p.classList.toggle("active", i === current && !sideActive);
-        p.classList.toggle("prev", i < current);
-      });
+      panel.style.top = `${parent * 100}vh`;
+      panel.style.left = dir === "right" ? "100vw" : "-100vw";
+    });
 
-      dots.forEach((d, i) => {
-        d.classList.toggle("active", i === current && !sideActive);
-      });
-
-      if (sideDot) sideDot.classList.toggle("active", sideActive);
-    }
-
-    function unlockAfter(ms = 850) {
+    function unlockAfter(ms = 920) {
       setTimeout(() => {
         busy = false;
       }, ms);
     }
 
+    function renderSlider() {
+      let x = 0;
+      let y = current * -100;
+
+      if (activeBranchKey) {
+        const branch = branchMap[activeBranchKey];
+        x = branch.dataset.dir === "right" ? -100 : 100;
+      }
+
+      slider.style.transform = `translate3d(${x}vw, ${y}vh, 0)`;
+
+      mainPanels.forEach((panel, i) => {
+        panel.classList.toggle("active", i === current && !activeBranchKey);
+        panel.classList.toggle("prev", i < current);
+        panel.classList.toggle("branch-origin", i === current && !!activeBranchKey);
+      });
+
+      branchPanels.forEach(panel => {
+        const key = `${panel.dataset.parent}:${panel.dataset.dir}`;
+        panel.classList.toggle("active", key === activeBranchKey);
+      });
+
+      dots.forEach((dot, i) => {
+        dot.classList.toggle("active", i === current && !activeBranchKey);
+      });
+
+      dotGroups.forEach((group, i) => {
+        group.classList.toggle("active", i === current && !activeBranchKey);
+        group.classList.toggle("branch-open", i === current && !!activeBranchKey);
+      });
+
+      miniDots.forEach(dot => {
+        const key = dot.dataset.branch;
+        dot.classList.toggle("active", key === activeBranchKey);
+      });
+    }
+
     function goTo(index) {
       if (busy) return;
-      if (index < 0 || index >= panels.length) return;
+      if (index < 0 || index >= mainPanels.length) return;
 
       busy = true;
       current = index;
-      sideActive = false;
+      activeBranchKey = null;
       renderSlider();
       unlockAfter();
     }
@@ -194,31 +472,48 @@
       goTo(current - 1);
     }
 
-    function openSide() {
-      if (busy || current !== branchIndex) return;
+    function openBranch(dir) {
+      if (busy) return;
+      const key = `${current}:${dir}`;
+      if (!branchMap[key]) return;
+
       busy = true;
-      sideActive = true;
+      activeBranchKey = key;
       renderSlider();
       unlockAfter();
     }
 
-    function closeSide() {
-      if (busy || !sideActive) return;
+    function closeBranch() {
+      if (busy || !activeBranchKey) return;
       busy = true;
-      sideActive = false;
+      activeBranchKey = null;
       renderSlider();
       unlockAfter();
     }
 
     window.addEventListener("wheel", (e) => {
       if (busy) return;
-      if (Math.abs(e.deltaY) < 20) return;
 
-      if (sideActive) {
-        if (e.deltaY < 0) closeSide();
-        else next();
+      const absX = Math.abs(e.deltaX);
+      const absY = Math.abs(e.deltaY);
+
+      if (absX > absY && absX > 20) {
+        if (!activeBranchKey) {
+          if (e.deltaX > 0) openBranch("right");
+          else openBranch("left");
+        } else {
+          const activeBranch = branchMap[activeBranchKey];
+          if (
+            (activeBranch.dataset.dir === "right" && e.deltaX < 0) ||
+            (activeBranch.dataset.dir === "left" && e.deltaX > 0)
+          ) {
+            closeBranch();
+          }
+        }
         return;
       }
+
+      if (absY < 20) return;
 
       if (e.deltaY > 0) next();
       else prev();
@@ -232,18 +527,30 @@
 
       if (e.key === "ArrowUp" || e.key === "PageUp") {
         e.preventDefault();
-        if (sideActive) closeSide();
-        else prev();
+        prev();
       }
 
-      if (e.key === "ArrowLeft" && current === branchIndex && !sideActive) {
+      if (e.key === "ArrowRight") {
         e.preventDefault();
-        openSide();
+        if (!activeBranchKey) openBranch("right");
+        else {
+          const activeBranch = branchMap[activeBranchKey];
+          if (activeBranch.dataset.dir === "left") closeBranch();
+        }
       }
 
-      if (e.key === "ArrowRight" && sideActive) {
+      if (e.key === "ArrowLeft") {
         e.preventDefault();
-        closeSide();
+        if (!activeBranchKey) openBranch("left");
+        else {
+          const activeBranch = branchMap[activeBranchKey];
+          if (activeBranch.dataset.dir === "right") closeBranch();
+        }
+      }
+
+      if (e.key === "Escape" && activeBranchKey) {
+        e.preventDefault();
+        closeBranch();
       }
     });
 
@@ -264,21 +571,22 @@
       if (Math.abs(diffX) > Math.abs(diffY)) {
         if (Math.abs(diffX) < 50) return;
 
-        if (current === branchIndex && !sideActive && diffX > 0) {
-          openSide();
-        } else if (sideActive && diffX < 0) {
-          closeSide();
+        if (!activeBranchKey) {
+          if (diffX > 0) openBranch("right");
+          else openBranch("left");
+        } else {
+          const activeBranch = branchMap[activeBranchKey];
+          if (
+            (activeBranch.dataset.dir === "right" && diffX < 0) ||
+            (activeBranch.dataset.dir === "left" && diffX > 0)
+          ) {
+            closeBranch();
+          }
         }
         return;
       }
 
       if (Math.abs(diffY) < 50) return;
-
-      if (sideActive) {
-        if (diffY < 0) closeSide();
-        else next();
-        return;
-      }
 
       if (diffY > 0) next();
       else prev();
@@ -290,18 +598,36 @@
       });
     });
 
-    if (sideDot) {
-      sideDot.addEventListener("click", () => {
-        if (current !== branchIndex) {
-          goTo(branchIndex);
-          setTimeout(() => openSide(), 80);
-        } else if (!sideActive) {
-          openSide();
+    miniDots.forEach(dot => {
+      dot.addEventListener("click", () => {
+        const [parent, dir] = dot.dataset.branch.split(":");
+        const parentIndex = Number(parent);
+
+        if (current !== parentIndex) {
+          goTo(parentIndex);
+          setTimeout(() => openBranch(dir), 120);
         } else {
-          closeSide();
+          if (activeBranchKey === dot.dataset.branch) closeBranch();
+          else openBranch(dir);
         }
       });
-    }
+    });
+
+    branchButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        const value = button.dataset.openBranch;
+        const [parent, dir] = value.split(":");
+        const parentIndex = Number(parent);
+
+        if (current !== parentIndex) {
+          goTo(parentIndex);
+          setTimeout(() => openBranch(dir), 120);
+        } else {
+          if (activeBranchKey === value) closeBranch();
+          else openBranch(dir);
+        }
+      });
+    });
 
     renderSlider();
   </script>
